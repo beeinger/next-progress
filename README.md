@@ -110,6 +110,6 @@ See [NProgress docs](https://www.npmjs.com/package/nprogress#configuration)
 
 Css Custom NProgress styles - must be provided as a GlobalStyleComponent - use [createGlobalStyle](https://styled-components.com/docs/api#createglobalstyle) from styled-components.
 
-**_Warning:_** [_color_](#🌈-color) param won't work as you should set the color yourself inside custom css.
+**_Warning:_** [_color_](#-color) param won't work as you should set the color yourself inside custom css.
 
 **_default = undefined_**
