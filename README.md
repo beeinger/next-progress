@@ -36,7 +36,7 @@ Anywhere in your [custom App](https://nextjs.org/docs/advanced-features/custom-a
 <NextProgress />
 ```
 
-## 🌟 Example
+## 🌟 Example pages\\\_app
 
 **_Tip:_** This example is in typescript, if you use javascript then just remove the types.
 
