@@ -1,8 +1,8 @@
-import React from "react";
-import { NProgressOptions } from "nprogress";
 import { DefaultTheme, GlobalStyleComponent } from "styled-components";
+import { NProgressOptions } from "nprogress";
+import React from "react";
 interface NextProgressProps {
-    height?: string;
+    height?: number | string;
     color?: string;
     delay?: number;
     options?: Partial<NProgressOptions>;

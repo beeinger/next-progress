@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
-import NProgress, { NProgressOptions } from "nprogress";
-import Router from "next/router";
 import {
-  createGlobalStyle,
   DefaultTheme,
   GlobalStyleComponent,
+  createGlobalStyle,
 } from "styled-components";
+import NProgress, { NProgressOptions } from "nprogress";
+import React, { useEffect } from "react";
+
+import Router from "next/router";
 
 interface NextProgressProps {
   height?: number | string;
