@@ -8,7 +8,7 @@ import {
 } from "styled-components";
 
 interface NextProgressProps {
-  height?: string;
+  height?: number | string;
   color?: string;
   delay?: number;
   options?: Partial<NProgressOptions>;
@@ -49,7 +49,7 @@ const NextProgress = React.memo(
         left: 0;
 
         width: 100%;
-        height: ${height};
+        height: ${typeof height === `string` ? height : `${height}px`};
       }
 
       /* Fancy blur effect */
