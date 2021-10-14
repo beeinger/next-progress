@@ -17,7 +17,7 @@ yarn add next-nprogress
 _or_
 
 ```bash
-npm --save next-nprogress
+npm install --save next-nprogress
 ```
 
 ### **✅ Import**
