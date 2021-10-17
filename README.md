@@ -4,6 +4,8 @@
 
 **_Fully configurable & easy to use_**
 
+## 🚀 [Demo](https://next-progress.vercel.app/)
+
 ## 🔌 Setup
 
 **_it's so quick_** <img src="https://cultofthepartyparrot.com/parrots/hd/ultrafastparrot.gif" width="20px" height="20px" />
