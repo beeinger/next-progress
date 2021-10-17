@@ -26,26 +26,32 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "dev-demo": "cd ./demo/ && next",
+    "build-demo": "cd ./demo/ && next build",
+    "start-demo": "cd ./demo/ && next start",
+    "next-lint": "cd ./demo/ && next lint"
   },
   "dependencies": {
-    "next": "^10.0.6",
+    "next": "^11.1.2",
     "nprogress": "^0.2.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "styled-components": "^5.2.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
-    "@types/node": "^14.14.25",
+    "@types/node": "^16.11.1",
     "@types/nprogress": "^0.2.0",
-    "@types/react": "^17.0.1",
-    "@types/react-dom": "^17.0.0",
-    "@types/styled-components": "^5.1.7",
+    "@types/react": "^17.0.30",
+    "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.15",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
-    "rollup": "^2.38.5",
-    "rollup-plugin-typescript2": "^0.29.0",
-    "typescript": "^4.1.3"
+    "eslint": "^8.0.1",
+    "eslint-config-next": "11.1.2",
+    "rollup": "^2.58.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
     "next": "^9.0.0",

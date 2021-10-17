@@ -98,6 +98,8 @@ Color of the progress bar.
 
 Delay of the animation - when page loads faster than the delay time progress bar won't be displayed.
 
+**_default = 0_**
+
 ### ⚙️ **_options_**
 
 Options for - NProgress.configure(options).
