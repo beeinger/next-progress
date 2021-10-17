@@ -13,13 +13,13 @@
 ### **✅ Install**
 
 ```bash
-yarn add next-nprogress
+yarn add next-progress
 ```
 
 _or_
 
 ```bash
-npm install --save next-nprogress
+npm install --save next-progress
 ```
 
 ### **✅ Import**
