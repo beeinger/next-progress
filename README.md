@@ -45,14 +45,11 @@ Anywhere in your [custom App](https://nextjs.org/docs/advanced-features/custom-a
 ```tsx
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import GlobalContext from "context";
-import { ThemeProvider } from "styled-components";
-import Layout from "organisms/Layout";
 import NextProgress from "next-progress";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={}>
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,24 +57,21 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Lorem Ipsum..." />
         <title>Example</title>
       </Head>
-      <GlobalContext.Provider value={}>
-        <GlobalStyle />
-        {
-          //
-          // Can be placed anywhere in the return statement
-          //
-        }
-        <NextProgress delay={300} options={{ showSpinner: false }} />
-        {
-          //
-          //
-          //
-        }
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </GlobalContext.Provider>
-    </ThemeProvider>
+      {
+        //
+        // Can be placed anywhere in the return statement
+        //
+      }
+      <NextProgress delay={300} options={{ showSpinner: false }} />
+      {
+        //
+        //
+        //
+      }
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 ```
@@ -112,7 +106,7 @@ See [NProgress docs](https://www.npmjs.com/package/nprogress#configuration)
 
 ### 👠 **_customGlobalCss_**
 
-Css Custom NProgress styles - must be provided as a GlobalStyleComponent - use [createGlobalStyle](https://styled-components.com/docs/api#createglobalstyle) from styled-components.
+Css Custom NProgress styles - must be provided as a string containing all the styles.
 
 **_Warning:_** [_color_](#-color) param won't work as you should set the color yourself inside custom css.
 

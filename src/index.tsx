@@ -1,8 +1,3 @@
-import {
-  DefaultTheme,
-  GlobalStyleComponent,
-  createGlobalStyle,
-} from "styled-components";
 import NProgress, { NProgressOptions } from "nprogress";
 import React, { useEffect } from "react";
 
@@ -13,7 +8,8 @@ interface NextProgressProps {
   color?: string;
   delay?: number;
   options?: Partial<NProgressOptions>;
-  customGlobalCss?: GlobalStyleComponent<{}, DefaultTheme>;
+  nonce?: string;
+  customGlobalCss?: JSX.Element;
 }
 
 /**
@@ -31,28 +27,24 @@ const NextProgress = React.memo(
     options,
     customGlobalCss,
   }: NextProgressProps) => {
-    const NProgressStyles =
-      customGlobalCss ||
-      createGlobalStyle`
+    const nextProgressStyles = (
+      <style>
+        {customGlobalCss ||
+          `
       /* Source: https://unpkg.com/nprogress@0.2.0/nprogress.css + styled-components implementation */
-
       /* Make clicks pass-through */
       #nprogress {
         pointer-events: none;
       }
-
       #nprogress .bar {
         background: ${color};
-
         position: fixed;
         z-index: 99999;
         top: 0;
         left: 0;
-
         width: 100%;
         height: ${typeof height === `string` ? height : `${height}px`};
       }
-
       /* Fancy blur effect */
       #nprogress .peg {
         display: block;
@@ -62,12 +54,10 @@ const NextProgress = React.memo(
         height: 100%;
         box-shadow: 0 0 10px ${color}, 0 0 5px ${color};
         opacity: 1.0;
-
         -webkit-transform: rotate(3deg) translate(0px, -4px);
             -ms-transform: rotate(3deg) translate(0px, -4px);
                 transform: rotate(3deg) translate(0px, -4px);
       }
-
       /* Remove these to get rid of the spinner */
       #nprogress .spinner {
         display: block;
@@ -76,31 +66,25 @@ const NextProgress = React.memo(
         top: 15px;
         right: 15px;
       }
-
       #nprogress .spinner-icon {
         width: 18px;
         height: 18px;
         box-sizing: border-box;
-
         border: solid 2px transparent;
         border-top-color: ${color};
         border-left-color: ${color};
         border-radius: 50%;
-
         -webkit-animation: nprogress-spinner 400ms linear infinite;
                 animation: nprogress-spinner 400ms linear infinite;
       }
-
       .nprogress-custom-parent {
         overflow: hidden;
         position: relative;
       }
-
       .nprogress-custom-parent #nprogress .spinner,
       .nprogress-custom-parent #nprogress .bar {
         position: absolute;
       }
-
       @-webkit-keyframes nprogress-spinner {
         0%   { -webkit-transform: rotate(0deg); }
         100% { -webkit-transform: rotate(360deg); }
@@ -109,7 +93,9 @@ const NextProgress = React.memo(
         0%   { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
-    `;
+  `}
+      </style>
+    );
 
     useEffect(() => {
       options && NProgress.configure(options);
@@ -125,9 +111,16 @@ const NextProgress = React.memo(
       Router.events.on("routeChangeStart", start);
       Router.events.on("routeChangeComplete", done);
       Router.events.on("routeChangeError", done);
+
+      return () => {
+        Router.events.off("routeChangeStart", start);
+        Router.events.off("routeChangeComplete", done);
+        Router.events.off("routeChangeError", done);
+        clearTimeout(timeout);
+      };
     }, []);
 
-    return <NProgressStyles />;
+    return nextProgressStyles;
   },
   () => true
 );

@@ -1,4 +1,3 @@
-import { DefaultTheme, GlobalStyleComponent } from "styled-components";
 import { NProgressOptions } from "nprogress";
 import React from "react";
 interface NextProgressProps {
@@ -6,7 +5,8 @@ interface NextProgressProps {
     color?: string;
     delay?: number;
     options?: Partial<NProgressOptions>;
-    customGlobalCss?: GlobalStyleComponent<{}, DefaultTheme>;
+    nonce?: string;
+    customGlobalCss?: JSX.Element;
 }
 /**
  * @param height Height of the progress bar.

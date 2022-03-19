@@ -1,6 +1,6 @@
 {
   "name": "next-progress",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "NextJS NProgress implementation with styled-components",
   "keywords": [
     "next",
@@ -27,37 +27,34 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "dev-demo": "cd ./demo/ && next",
-    "build-demo": "cd ./demo/ && next build",
-    "start-demo": "cd ./demo/ && next start",
-    "next-lint": "cd ./demo/ && next lint"
+    "demo:dev": "cd ./demo/ && next",
+    "demo:build": "cd ./demo/ && next build",
+    "demo:start": "cd ./demo/ && next start",
+    "demo:lint": "cd ./demo/ && next lint"
   },
   "dependencies": {
-    "next": "^11.1.2",
+    "next": "^12.1.0",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": "^5.3.1"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/node": "^16.11.1",
+    "@types/node": "^17.0.21",
     "@types/nprogress": "^0.2.0",
-    "@types/react": "^17.0.30",
-    "@types/react-dom": "^17.0.9",
-    "@types/styled-components": "^5.1.15",
+    "@types/react": "^17.0.41",
+    "@types/react-dom": "^17.0.14",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
-    "eslint": "^8.0.1",
-    "eslint-config-next": "11.1.2",
-    "rollup": "^2.58.0",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.4.4"
+    "eslint": "^8.11.0",
+    "eslint-config-next": "12.1.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.2"
   },
   "peerDependencies": {
     "next": "^9.0.0",
     "nprogress": "^0.2.0",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "styled-components": "^5.0.0"
+    "react-dom": "^16.8.0"
   }
 }
