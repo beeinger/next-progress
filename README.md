@@ -4,7 +4,7 @@
 
 **_Fully configurable & easy to use_**
 
-## 🚀 [Demo](https://next-progress.vercel.app/)
+## 🚀 [Demo](https://next-progress.beeinger.dev/)
 
 ## 🔌 Setup
 
