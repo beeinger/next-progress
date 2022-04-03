@@ -106,7 +106,7 @@ See [NProgress docs](https://www.npmjs.com/package/nprogress#configuration)
 
 ### 👠 **_customGlobalCss_**
 
-Css Custom NProgress styles - must be provided as a string containing all the styles.
+Css Custom NProgress styles - must be provided as a string that will go inside the [`<style jsx>`](https://nextjs.org/blog/styling-next-with-styled-jsx#:~:text=simple%20as%20adding%20a-,%3Cstyle%20jsx%3E,-tag%20into%20an) tag.
 
 **_Warning:_** [_color_](#-color) param won't work as you should set the color yourself inside custom css.
 
