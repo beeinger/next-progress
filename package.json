@@ -1,6 +1,6 @@
 {
   "name": "next-progress",
-  "version": "2.2.0-alpha.1",
+  "version": "2.2.0-alpha.3",
   "description": "NextJS NProgress implementation",
   "keywords": [
     "next",
@@ -36,8 +36,7 @@
     "demo:build": "cd ./demo/ && next build",
     "demo:start": "cd ./demo/ && next start",
     "demo:lint": "cd ./demo/ && next lint",
-    "prepublish": "yarn build",
-    "publish": "npm publish"
+    "prepublish": "yarn build"
   },
   "dependencies": {
     "nprogress": "^0.2.0"

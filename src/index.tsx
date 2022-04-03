@@ -28,7 +28,7 @@ const NextProgress = React.memo(
     customGlobalCss,
   }: NextProgressProps) => {
     const nextProgressStyles = (
-      <style>
+      <style global jsx>
         {customGlobalCss ||
           `
       /* Source: https://unpkg.com/nprogress@0.2.0/nprogress.css + styled-components implementation */
