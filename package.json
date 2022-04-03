@@ -1,7 +1,7 @@
 {
   "name": "next-progress",
-  "version": "2.2.0-alpha.0",
-  "description": "NextJS NProgress implementation with styled-components",
+  "version": "2.2.0-alpha.1",
+  "description": "NextJS NProgress implementation",
   "keywords": [
     "next",
     "nextjs",
@@ -18,9 +18,14 @@
     "type": "git",
     "url": "https://github.com/beeinger/next-progress.git"
   },
+  "bugs": {
+    "url": "https://github.com/beeinger/next-progress/issues"
+  },
+  "homepage": "https://github.com/beeinger/next-progress#readme",
   "license": "MIT",
   "author": "beeinger",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -30,7 +35,9 @@
     "demo:dev": "cd ./demo/ && next",
     "demo:build": "cd ./demo/ && next build",
     "demo:start": "cd ./demo/ && next start",
-    "demo:lint": "cd ./demo/ && next lint"
+    "demo:lint": "cd ./demo/ && next lint",
+    "prepublish": "yarn build",
+    "publish": "npm publish"
   },
   "dependencies": {
     "nprogress": "^0.2.0"
