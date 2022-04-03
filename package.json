@@ -1,6 +1,6 @@
 {
   "name": "next-progress",
-  "version": "2.1.2",
+  "version": "2.2.0-alpha.0",
   "description": "NextJS NProgress implementation with styled-components",
   "keywords": [
     "next",
@@ -33,10 +33,7 @@
     "demo:lint": "cd ./demo/ && next lint"
   },
   "dependencies": {
-    "next": "^12.1.4",
-    "nprogress": "^0.2.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "nprogress": "^0.2.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
@@ -47,14 +44,15 @@
     "babel-runtime": "^6.26.0",
     "eslint": "^8.12.0",
     "eslint-config-next": "12.1.4",
+    "next": "^12.1.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "rollup": "^2.70.1",
     "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.6.3"
   },
   "peerDependencies": {
-    "next": ">=9.0.0",
-    "nprogress": ">=0.2.0",
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "next": ">=6.0.0",
+    "react": ">=16.0.0"
   }
 }
