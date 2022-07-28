@@ -27,7 +27,8 @@ var NextProgress = React__default["default"].memo(function (_a) {
         options && NProgress__default["default"].configure(options);
         var timeout;
         var start = function () {
-            return (timeout = setTimeout(function () { return NProgress__default["default"].start(); }, delay));
+            clearTimeout(timeout);
+            timeout = setTimeout(function () { return NProgress__default["default"].start(); }, delay);
         }, done = function () {
             clearTimeout(timeout);
             NProgress__default["default"].done();

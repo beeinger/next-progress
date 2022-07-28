@@ -101,8 +101,10 @@ const NextProgress = React.memo(
       options && NProgress.configure(options);
 
       let timeout: NodeJS.Timeout;
-      const start = () =>
-          (timeout = setTimeout(() => NProgress.start(), delay)),
+      const start = () => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => NProgress.start(), delay);
+        },
         done = () => {
           clearTimeout(timeout);
           NProgress.done();
