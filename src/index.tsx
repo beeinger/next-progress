@@ -9,7 +9,7 @@ interface NextProgressProps {
   delay?: number;
   options?: Partial<NProgressOptions>;
   nonce?: string;
-  customGlobalCss?: JSX.Element;
+  customGlobalCss?: string;
 }
 
 /**
