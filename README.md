@@ -96,6 +96,12 @@ Delay of the animation - when page loads faster than the delay time progress bar
 
 **_default = 0_**
 
+### ♻️ **_disableSameRoute_**
+
+If true, progress bar won't be displayed when user travels the same route they're currently on.
+
+**_default = false_**
+
 ### ⚙️ **_options_**
 
 Options for - NProgress.configure(options).

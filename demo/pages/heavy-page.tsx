@@ -8,7 +8,7 @@ export default function HeavyPage(): ReactElement {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  // Something that takes a long time, simulating a heavy page
+  //? Something that takes a long time, simulating a heavy page
   await new Promise((resolve) => setTimeout(resolve, 4500));
 
   return {

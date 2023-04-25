@@ -13,11 +13,5 @@ export default {
     },
   ],
   plugins: [typescript()],
-  external: [
-    "react",
-    "react-dom",
-    "next/router",
-    "styled-components",
-    "nprogress",
-  ],
+  external: ["react", "react-dom", "next/router", "nprogress"],
 };
