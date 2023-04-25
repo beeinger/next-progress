@@ -24,6 +24,7 @@ var NextProgress = React.memo(function (_a) {
         options && NProgress.configure(options);
         var timeout;
         var start = function (e) {
+            clearTimeout(timeout);
             if (disableSameRoute && Router.route === e)
                 return;
             timeout = setTimeout(function () { return NProgress.start(); }, delay);
