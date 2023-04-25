@@ -29,7 +29,12 @@ export default function App({ Component, pageProps }: AppProps) {
         // Can be placed anywhere in the return statement
         //
       }
-      <NextProgress delay={300} height="8px" options={{ showSpinner: false }} />
+      <NextProgress
+        delay={300}
+        height="8px"
+        options={{ showSpinner: false }}
+        disableSameRoute
+      />
       {
         //
         //

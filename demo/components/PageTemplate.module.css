@@ -20,7 +20,7 @@
   }
 }
 
-.container > h1 {
+.container > a > h1 {
   margin-bottom: 32px;
   white-space: nowrap;
 }

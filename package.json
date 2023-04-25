@@ -1,6 +1,6 @@
 {
   "name": "next-progress",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "NextJS NProgress implementation",
   "keywords": [
     "next",
@@ -30,8 +30,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "start": "rollup -c -w --bundleConfigAsCjs",
     "demo:dev": "cd ./demo/ && next",
     "demo:build": "cd ./demo/ && next build",
     "demo:start": "cd ./demo/ && next start",
@@ -41,20 +41,20 @@
     "nprogress": "^0.2.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.23",
+    "@types/node": "^18.16.0",
     "@types/nprogress": "^0.2.0",
-    "@types/react": "^17.0.43",
-    "@types/react-dom": "^17.0.14",
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
-    "eslint": "^8.12.0",
-    "eslint-config-next": "12.1.4",
-    "next": "^12.1.4",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "rollup": "^2.70.1",
-    "rollup-plugin-typescript2": "^0.31.2",
-    "typescript": "^4.6.3"
+    "eslint": "^8.39.0",
+    "eslint-config-next": "13.3.1",
+    "next": "^13.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.21.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
     "next": ">=6.0.0",
