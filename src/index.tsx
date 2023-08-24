@@ -72,5 +72,7 @@ const NextProgress = React.memo(
 
 export default NextProgress;
 
+export { NProgress };
+
 //? Unexported type from next/dist/shared/lib/mitt.d.ts
 declare type Handler = (...evts: any[]) => void;
