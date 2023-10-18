@@ -43,9 +43,9 @@ const NextProgress = React.memo(
       options && NProgress.configure(options);
 
       let timeout: NodeJS.Timeout;
-      const start: Handler = (e) => {
+      const start: Handler = (e, { shallow }) => {
           clearTimeout(timeout);
-          if (disableSameRoute && Router.route === e) return;
+          if (disableSameRoute && (shallow || Router.route === e)) return;
           timeout = setTimeout(() => NProgress.start(), delay);
         },
         done: Handler = () => {
